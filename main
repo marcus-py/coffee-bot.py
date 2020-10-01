@@ -7,7 +7,7 @@ def coffee_bot():
   cup_type = which_cup()
   temp = coffee_temp()
   print('Alright, that\'s a {} {} {} in a {} cup!'.format(temp, size, drink_type, cup_type))
-  name = input('Can I get your name please?')
+  name = input('Can I get your name please? \n> ')
   print('Thanks {}! Your drink will be ready shortly!'.format(name))
 
 
@@ -34,8 +34,8 @@ def get_size():
     get_drink_type()
   else:
     error()
-    get_size()
-  return res
+    return get_size()
+ 
 
 
 # Gets the preffered drink type.
@@ -54,8 +54,8 @@ def get_drink_type():
     
   else:
     error()
-    get_drink_type()
-  return res
+    return get_drink_type()
+
 
 # Gets a milk option for a latte.
 def order_latte(): 
@@ -71,11 +71,11 @@ def order_latte():
     which_cup()
   else:
     error()
-    order_latte()
-  return res
+    return order_latte()
+
 
 def which_cup():
-  res = input('Would you like to use a plastic cup, or do you want to use your own reusable cup? \n[a] Plastic \n[b] Reusable ')
+  res = input('Would you like to use a plastic cup, or do you want to use your own reusable cup? \n[a] Plastic \n[b] Reusable \n> ')
   if res == 'a':
     return 'plastic'
     coffee_temp()
@@ -84,11 +84,11 @@ def which_cup():
     coffee_temp()
   else:
     error()
-    which_cup()
-  return res
+    return which_cup()
+
 
 def coffee_temp():
-  res = input('Will that be hot or iced? \n[a] Hot \n[b] Iced ')
+  res = input('Will that be hot or iced? \n[a] Hot \n[b] Iced \n> ')
   if res == 'a':
     return 'hot'
     
@@ -97,8 +97,7 @@ def coffee_temp():
     
   else:
     error()
-    coffee_temp()
-  return res
+    return coffee_temp()
 
 
 
