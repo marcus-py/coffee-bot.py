@@ -1,0 +1,108 @@
+# The Coffee Bot
+def coffee_bot():
+  print('Welcome to the cafe!')
+
+  size = get_size()  
+  drink_type = get_drink_type()
+  cup_type = which_cup()
+  temp = coffee_temp()
+  print('Alright, that\'s a {} {} {} in a {} cup!'.format(temp, size, drink_type, cup_type))
+  name = input('Can I get your name please?')
+  print('Thanks {}! Your drink will be ready shortly!'.format(name))
+
+
+
+
+
+# The error message
+
+def error():
+  print("I'm sorry, I did not understand your selection. Please enter the corresponding letter for your response.")
+
+# Gets the preferred drink size.
+
+def get_size():
+  res = input('What size drink can I get for you? \n[a] Small \n[b] Medium \n[c] Large \n> ')
+  if res == 'a':
+    return 'small'
+    get_drink_type()
+  elif res == 'b':
+    return 'medium'
+    get_drink_type()
+  elif res == 'c':
+    return 'large'
+    get_drink_type()
+  else:
+    error()
+    get_size()
+  return res
+
+
+# Gets the preffered drink type.
+
+def get_drink_type():
+  res = input('What type of drink would you like? \n[a] Brewed Coffee \n[b] Mocha \n[c] Latte \n> ')
+  if res == 'a':
+    return 'brewed coffee'
+    which_cup()
+  elif res == 'b':
+    return 'mocha'
+    which_cup()
+  elif res == 'c':
+    return 'latte'
+    order_latte()
+    
+  else:
+    error()
+    get_drink_type()
+  return res
+
+# Gets a milk option for a latte.
+def order_latte(): 
+  res = input('And what kind of milk for your latte? \n[a] 2% milk \n[b] Non-fat milk \n[c] Soy milk \n> ')
+  if res == 'a':
+    return 'latte'
+    which_cup()
+  elif res == 'b':
+    return 'non-fat latte'
+    which_cup()
+  elif res == 'c':
+    return 'soy latte'
+    which_cup()
+  else:
+    error()
+    order_latte()
+  return res
+
+def which_cup():
+  res = input('Would you like to use a plastic cup, or do you want to use your own reusable cup? \n[a] Plastic \n[b] Reusable ')
+  if res == 'a':
+    return 'plastic'
+    coffee_temp()
+  elif res == 'b':
+    return 'reusable'
+    coffee_temp()
+  else:
+    error()
+    which_cup()
+  return res
+
+def coffee_temp():
+  res = input('Will that be hot or iced? \n[a] Hot \n[b] Iced ')
+  if res == 'a':
+    return 'hot'
+    
+  elif res == 'b':
+    return 'iced'
+    
+  else:
+    error()
+    coffee_temp()
+  return res
+
+
+
+
+
+# Coffee Bot!
+coffee_bot()
