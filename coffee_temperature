@@ -1,0 +1,11 @@
+def coffee_temp():
+  res = input('Will that be hot or iced? \n[a] Hot \n[b] Iced \n> ')
+  if res == 'a':
+    return 'hot'
+    
+  elif res == 'b':
+    return 'iced'
+    
+  else:
+    error()
+    return coffee_temp()
