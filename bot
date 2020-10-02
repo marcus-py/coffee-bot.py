@@ -6,7 +6,10 @@ def coffee_bot():
   drink_type = get_drink_type()
   cup_type = which_cup()
   temperature = coffee_temperature()
-  print('Alright, that\'s a {} {} {} in a {} cup!'.format(temp, size, drink_type, cup_type))
+  if temperature == 'iced':
+    print('Alright, that\'s an {} {} {} in a {} cup!'.format(temp, size, drink_type, cup_type))
+  else:
+    print('Alright, that\'s a {} {} {} in a {} cup!'.format(temp, size, drink_type, cup_type))
   name = input('Can I get your name please? \n> ')
   print('Thanks {}! Your drink will be ready shortly!'.format(name))
 
@@ -75,7 +78,7 @@ def order_latte():
 
 
 def which_cup():
-  res = input('Would you like to use a plastic cup, or do you want to use your own reusable cup? \n[a] Plastic \n[b] Reusable \n> ')
+  res = input('Would you like to use a plastic cup, or do you want us to fill up your reusable cup? \n[a] Plastic \n[b] Reusable \n> ')
   if res == 'a':
     return 'plastic'
     coffee_temp()
@@ -103,5 +106,5 @@ def coffee_temperature():
 
 
 
-# Coffee Bot!
+# Coffee Bot!!
 coffee_bot()
