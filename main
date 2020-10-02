@@ -5,7 +5,7 @@ def coffee_bot():
   size = get_size()  
   drink_type = get_drink_type()
   cup_type = which_cup()
-  temp = coffee_temp()
+  temperature = coffee_temperature()
   print('Alright, that\'s a {} {} {} in a {} cup!'.format(temp, size, drink_type, cup_type))
   name = input('Can I get your name please? \n> ')
   print('Thanks {}! Your drink will be ready shortly!'.format(name))
@@ -87,7 +87,7 @@ def which_cup():
     return which_cup()
 
 
-def coffee_temp():
+def coffee_temperature():
   res = input('Will that be hot or iced? \n[a] Hot \n[b] Iced \n> ')
   if res == 'a':
     return 'hot'
@@ -97,7 +97,7 @@ def coffee_temp():
     
   else:
     error()
-    return coffee_temp()
+    return coffee_temperature()
 
 
 
