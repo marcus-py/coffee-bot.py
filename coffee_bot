@@ -1,0 +1,10 @@
+def coffee_bot():
+  print('Welcome to the cafe!')
+
+  size = get_size()  
+  drink_type = get_drink_type()
+  cup_type = which_cup()
+  temp = coffee_temp()
+  print('Alright, that\'s a {} {} {} in a {} cup!'.format(temp, size, drink_type, cup_type))
+  name = input('Can I get your name please? \n> ')
+  print('Thanks {}! Your drink will be ready shortly!'.format(name))
