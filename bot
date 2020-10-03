@@ -75,7 +75,8 @@ def order_latte():
 
 
 def which_cup():
-    res = input('Would you like to use a plastic cup, or do you want us to fill up your reusable cup? \n[a] Plastic \n[b] Reusable \n> ')
+    res = input(
+        'Would you like to use a plastic cup, or do you want us to fill up your reusable cup? \n[a] Plastic \n[b] Reusable \n> ')
     if res == 'a':
         return 'plastic'
         coffee_temperature()
