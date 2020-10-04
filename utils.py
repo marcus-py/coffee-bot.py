@@ -1,3 +1,5 @@
+# You need this for the main bot to work
+
 def print_message():
   print('I\'m sorry, I did not understand your selection. Please enter the corresponding letter for your response.')
   
