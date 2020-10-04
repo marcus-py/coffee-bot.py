@@ -1,1 +1,0 @@
-# This is just me messing around with the project "Coffee Chatbot" in the course "Build Chatbots with Python" on Codecademy. Here is the link if you want it: https://www.codecademy.com/learn/paths/build-chatbots-with-python.
