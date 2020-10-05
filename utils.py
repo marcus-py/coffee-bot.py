@@ -5,7 +5,7 @@ def print_message():
   
 def get_size():
   res = input('What size drink can I get for you? \n[a] Small \n[b] Medium \n[c] Large \n> ')
-  
+  res = res.lower()
   if res == 'a':
     return 'small'
   elif res == 'b':
@@ -18,7 +18,7 @@ def get_size():
 
 def order_latte():
   res = input('And what kind of milk for your latte? \n[a] 2% milk \n[b] Non-fat milk \n[c] Soy milk \n> ')
-
+  res = res.lower()
   if res == 'a':
     return 'latte'
   elif res == 'b':
