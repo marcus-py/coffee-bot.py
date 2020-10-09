@@ -1,1 +1,3 @@
 This is me improving on a chatbot I made...
+
+[![Run on Repl.it](https://repl.it/badge/github/marcus-py/coffee-bot.py)](https://repl.it/github/marcus-py/coffee-bot.py)
